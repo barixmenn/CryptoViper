@@ -14,6 +14,8 @@ protocol AnyPresenter {
     var interactor : AnyInteractor? {get set}
     var router : AnyRouter? {get set}
     var view : AnyView? {get set}
+    
+    func interactorDidDownloadCrypto(result: Result <[Crypto], Error>)
 }
 
 class CryptoPresenter: AnyPresenter {
@@ -21,5 +23,15 @@ class CryptoPresenter: AnyPresenter {
     var view: AnyView?
     var router: AnyRouter?
     
+    func interactorDidDownloadCrypto(result: Result<[Crypto], Error>) {
+        switch result {
+        case .success(let cryptos):
+            //View Update
+            print("update")
+        case .failure(let error):
+            // view.update(error)
+            print("error")
+        }
+    }
 
 }

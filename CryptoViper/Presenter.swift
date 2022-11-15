@@ -8,4 +8,18 @@
 import Foundation
 
 // Class , protocol
-// talks to -> Interactor, routeri view
+// talks to -> Interactor, router, view
+
+protocol AnyPresenter {
+    var interactor : AnyInteractor? {get set}
+    var router : AnyRouter? {get set}
+    var view : AnyView? {get set}
+}
+
+class CryptoPresenter: AnyPresenter {
+    var interactor: AnyInteractor?
+    var view: AnyView?
+    var router: AnyRouter?
+    
+
+}

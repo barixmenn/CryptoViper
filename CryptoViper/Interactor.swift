@@ -10,3 +10,10 @@ import Foundation
 // Class, protocol
 // talks to -> Presenter
 
+protocol AnyInteractor {
+    
+}
+
+class CrpytoInteractor: AnyInteractor {
+    
+}

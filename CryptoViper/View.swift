@@ -12,10 +12,11 @@ import UIKit
 // Class, protocol
 // View Controller
 
-class ViewController : UIViewController {
+protocol AnyView {
+    var presenter : AnyPresenter? {get set}
+}
+
+class CryptoView : UIViewController, AnyView {
+    var presenter: AnyPresenter?
     
-    override func  viewDidLoad() {
-        super.viewDidLoad()
-        view?.backgroundColor = .gray
-    }
 }

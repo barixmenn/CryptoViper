@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		60504992292449FC0004BE81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60504991292449FC0004BE81 /* AppDelegate.swift */; };
 		60504994292449FC0004BE81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60504993292449FC0004BE81 /* SceneDelegate.swift */; };
-		60504996292449FC0004BE81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60504995292449FC0004BE81 /* ViewController.swift */; };
-		60504999292449FD0004BE81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60504997292449FD0004BE81 /* Main.storyboard */; };
 		6050499B292449FE0004BE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6050499A292449FE0004BE81 /* Assets.xcassets */; };
 		6050499E292449FE0004BE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6050499C292449FE0004BE81 /* LaunchScreen.storyboard */; };
+		605049A829244AC40004BE81 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605049A729244AC40004BE81 /* View.swift */; };
+		605049AA29244ACF0004BE81 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605049A929244ACF0004BE81 /* Interactor.swift */; };
+		605049AC29244AD90004BE81 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605049AB29244AD90004BE81 /* Presenter.swift */; };
+		605049AE29244ADE0004BE81 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605049AD29244ADE0004BE81 /* Router.swift */; };
+		605049B029244AF00004BE81 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605049AF29244AF00004BE81 /* Entity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6050498E292449FC0004BE81 /* CryptoViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60504991292449FC0004BE81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60504993292449FC0004BE81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60504995292449FC0004BE81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		60504998292449FD0004BE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6050499A292449FE0004BE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6050499D292449FE0004BE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6050499F292449FE0004BE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605049A729244AC40004BE81 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		605049A929244ACF0004BE81 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		605049AB29244AD90004BE81 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		605049AD29244ADE0004BE81 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		605049AF29244AF00004BE81 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		60504990292449FC0004BE81 /* CryptoViper */ = {
 			isa = PBXGroup;
 			children = (
-				60504991292449FC0004BE81 /* AppDelegate.swift */,
-				60504993292449FC0004BE81 /* SceneDelegate.swift */,
-				60504995292449FC0004BE81 /* ViewController.swift */,
-				60504997292449FD0004BE81 /* Main.storyboard */,
-				6050499A292449FE0004BE81 /* Assets.xcassets */,
-				6050499C292449FE0004BE81 /* LaunchScreen.storyboard */,
+				605049A729244AC40004BE81 /* View.swift */,
+				605049A929244ACF0004BE81 /* Interactor.swift */,
+				605049AB29244AD90004BE81 /* Presenter.swift */,
+				605049AD29244ADE0004BE81 /* Router.swift */,
+				605049AF29244AF00004BE81 /* Entity.swift */,
+				605049B229244CB30004BE81 /* Screen */,
+				605049B129244CA50004BE81 /* App */,
 				6050499F292449FE0004BE81 /* Info.plist */,
 			);
 			path = CryptoViper;
+			sourceTree = "<group>";
+		};
+		605049B129244CA50004BE81 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				60504991292449FC0004BE81 /* AppDelegate.swift */,
+				60504993292449FC0004BE81 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		605049B229244CB30004BE81 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6050499A292449FE0004BE81 /* Assets.xcassets */,
+				6050499C292449FE0004BE81 /* LaunchScreen.storyboard */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +152,6 @@
 			files = (
 				6050499E292449FE0004BE81 /* LaunchScreen.storyboard in Resources */,
 				6050499B292449FE0004BE81 /* Assets.xcassets in Resources */,
-				60504999292449FD0004BE81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60504996292449FC0004BE81 /* ViewController.swift in Sources */,
+				605049AC29244AD90004BE81 /* Presenter.swift in Sources */,
+				605049A829244AC40004BE81 /* View.swift in Sources */,
+				605049AE29244ADE0004BE81 /* Router.swift in Sources */,
+				605049B029244AF00004BE81 /* Entity.swift in Sources */,
+				605049AA29244ACF0004BE81 /* Interactor.swift in Sources */,
 				60504992292449FC0004BE81 /* AppDelegate.swift in Sources */,
 				60504994292449FC0004BE81 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		60504997292449FD0004BE81 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60504998292449FD0004BE81 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6050499C292449FE0004BE81 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +312,9 @@
 				INFOPLIST_FILE = CryptoViper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +340,9 @@
 				INFOPLIST_FILE = CryptoViper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
